@@ -1,20 +1,42 @@
 ### GET - pobranie wszystkich tagów bez konwersji na obiekty
-GET /api/tags/raw
+#   Done
+GET http://localhost:3000/api/tags/raw
 
 ### GET - pobranie wszystkich tagów z konwersją na obiekty
-GET /api/tags
+#   Done
+GET http://localhost:3000/api/tags
 
 ### GET - pobranie jednego taga
-GET /api/tags/1
+#   Done
+GET http://localhost:3000/api/tags/0
 
 ### POST - utworzenie nowego taga
-POST /api/tags 
+#   Done
+POST http://localhost:3000/api/tags 
+Content-Type: multipart/form-data; boundary=----Form
+
+------Form
+Content-Disposition: form-data; name="name"
+
+test3
+------Form
+Content-Disposition: form-data; name="popularity"
+
+0
+------Form
+
 
 ### PATCH - aktualizacja danych zdjęcia o nowy tag
-PATCH /api/photos/tags
+PATCH http://localhost:3000/api/photos/tags/b194281c-2acb-4cae-8c9b-686f3eab491c
+Content-Type: multipart/form-data; boundary=----Form
+------Form
+Content-Disposition: form-data; name="tagName"
+
+test2
+------Form
 
 ### PATCH - aktualizacja danych zdjęcia o tablicę nowych tag-ów
-PATCH /api/photos/tags/mass
+PATCH http://localhost:3000/api/photos/tags/mass
 
 ### GET - pobranie tagów danego zdjęcia
-GET /api/photos/tags/12345
+GET http://localhost:3000/api/photos/tags/b194281c-2acb-4cae-8c9b-686f3eab491c
