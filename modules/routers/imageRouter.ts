@@ -105,7 +105,7 @@ const imageRouter = async (req: IncomingMessage, res: ServerResponse) => {
                 masterJsonData[index].tags?.push(postData["tagName"]![0])
 
                 res.writeHead(200, { 'Content-Type': 'application/json' })
-                res.write(JSON.stringify(masterJsonData[index].tags))
+                res.write(JSON.stringify(masterJsonData[index]))
                 res.end()
 
             }

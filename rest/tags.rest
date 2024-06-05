@@ -29,6 +29,7 @@ Content-Disposition: form-data; name="popularity"
 ### PATCH - aktualizacja danych zdjęcia o nowy tag
 PATCH http://localhost:3000/api/photos/tags/b194281c-2acb-4cae-8c9b-686f3eab491c
 Content-Type: multipart/form-data; boundary=----Form
+
 ------Form
 Content-Disposition: form-data; name="tagName"
 

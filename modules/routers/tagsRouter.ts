@@ -92,8 +92,8 @@ const tagsRouter = async (req: IncomingMessage, res: ServerResponse) => {
 
                 console.log(masterTagData);
 
-                writeFileSync(path.join(__projectDir, 'db/tags.json'), JSON.stringify(masterTagData))
                 console.log(masterTagsJsonEntry);
+                // writeFileSync(path.join(__projectDir, 'db/tags.json'), JSON.stringify(masterTagData))
 
                 res.writeHead(200)
                 res.end()
