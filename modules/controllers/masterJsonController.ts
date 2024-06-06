@@ -11,7 +11,7 @@ interface masterJsonEntry {
 interface imageChangeTimestamp {
     status: string,
     timestamp: number,
-    newUrl?: string
+    url: string
 }
 
 export { masterJsonEntry, imageChangeTimestamp }

@@ -53,7 +53,8 @@ class PhotoController {
             "history": [
                 {
                     "status": "original",
-                    "timestamp": + new Date()
+                    "timestamp": + new Date(),
+                    "url": path.join(albumPath, files.file![0].newFilename)
                 }
             ]
         }
@@ -75,25 +76,28 @@ class PhotoController {
         writeFileSync(path.join(__projectDir, 'db/master.json'), JSON.stringify(masterJsonData))
     }
 
-    patchPhoto(req: IncomingMessage, patchName: string, newUrl?: string) {
+    patchPhoto(id: string, patchName: string, newUrl?: string) {
 
         let dbData = readFileSync(path.join(__projectDir, 'db/master.json'), { encoding: 'utf-8' })
         let masterJsonData: masterJsonEntry[] = JSON.parse(dbData)
 
-        let index = masterJsonData.map(e => e.id).indexOf(path.basename(req.url!))
+        let index = masterJsonData.map(e => e.id).indexOf(id)
 
 
         let patchTimestamp: imageChangeTimestamp = {
             status: patchName,
             timestamp: + new Date(),
-            newUrl: newUrl
+            url: newUrl!
         }
 
+        if (newUrl) {
+            masterJsonData[index].url = newUrl
+        }
         masterJsonData[index].changes = patchTimestamp.status
         masterJsonData[index].history.push(patchTimestamp)
 
-        console.log(masterJsonData[index]);
         photoController.writeToDb(masterJsonData)
+        // console.log(masterJsonData[index]);
 
     }
 }

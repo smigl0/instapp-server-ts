@@ -91,7 +91,7 @@ const imageRouter = async (req: IncomingMessage, res: ServerResponse) => {
     else if (req.method == "PATCH") {
 
         if (/\/api\/photos\/[0-9,a-f]+/.test(req.url!)) {
-            photoController.patchPhoto(req, 'update2')
+            photoController.patchPhoto(path.basename(req.url!), 'update2')
         }
 
         // add multiple tags

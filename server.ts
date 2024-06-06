@@ -1,6 +1,8 @@
 import { createServer } from "http";
 import imageRouter from "./modules/routers/imageRouter";
 import tagsRouter from "./modules/routers/tagsRouter";
+import filterRouter from "./modules/routers/filterRouter";
+import getImageRouter from "./modules/routers/getImageRouter"
 // import path from "path";
 
 let PORT = 3000;
@@ -22,7 +24,12 @@ createServer(async (req, res) => {
     }
 
     else if (req.url!.search("/api/filters") != -1) {
+        await filterRouter(req, res)
+    }
 
+    else if (req.url!.search("/api/getImage") != -1) {
+
+        await getImageRouter(req, res)
     }
 })
     .listen(PORT, () => console.log(`http://127.0.0.1:${PORT}/`))

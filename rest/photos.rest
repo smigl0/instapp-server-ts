@@ -24,7 +24,7 @@ GET http://localhost:3000/api/photos HTTP/1.1
 
 ### GET - get json of item
 #   Done
-GET http://localhost:3000/api/photos/b60c03e5-0094-41a8-b63a-6989b583c5b7 HTTP/1.1
+GET http://localhost:3000/api/photos/206fcc9b-f8d7-450b-aed7-594c57d7fcc6 HTTP/1.1
 
 ### DELETE - delete file
 # Done
