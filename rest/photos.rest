@@ -24,10 +24,11 @@ GET http://localhost:3000/api/photos HTTP/1.1
 
 ### GET - get json of item
 #   Done
-GET http://localhost:3000/api/photos/c43a1dab-af90-4488-8cc2-b7aa457de382 HTTP/1.1
+GET http://localhost:3000/api/photos/b60c03e5-0094-41a8-b63a-6989b583c5b7 HTTP/1.1
 
 ### DELETE - delete file
-DELETE http://localhost:3000/api/photos/66f2eee3-92f6-4e5f-a620-99f9eebeb810 HTTP/1.1
+# Done
+DELETE http://localhost:3000/api/photos/e2115122-5bae-4bfa-8fab-f89aeb89076c HTTP/1.1
 
 ### PATCH - update
-PATCH  http://localhost:3000/api/photos/c43a1dab-af90-4488-8cc2-b7aa457de382 HTTP/1.1
+PATCH  http://localhost:3000/api/photos/b60c03e5-0094-41a8-b63a-6989b583c5b7 HTTP/1.1

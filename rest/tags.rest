@@ -18,7 +18,7 @@ Content-Type: multipart/form-data; boundary=----Form
 ------Form
 Content-Disposition: form-data; name="name"
 
-test3
+test5
 ------Form
 Content-Disposition: form-data; name="popularity"
 
@@ -27,17 +27,27 @@ Content-Disposition: form-data; name="popularity"
 
 
 ### PATCH - aktualizacja danych zdjęcia o nowy tag
-PATCH http://localhost:3000/api/photos/tags/b194281c-2acb-4cae-8c9b-686f3eab491c
+# DONE
+PATCH http://localhost:3000/api/photos/tags/b60c03e5-0094-41a8-b63a-6989b583c5b7
 Content-Type: multipart/form-data; boundary=----Form
 
 ------Form
 Content-Disposition: form-data; name="tagName"
 
-test2
+langosz
 ------Form
 
 ### PATCH - aktualizacja danych zdjęcia o tablicę nowych tag-ów
-PATCH http://localhost:3000/api/photos/tags/mass
+# DONE
+PATCH http://localhost:3000/api/photos/tags/mass/b60c03e5-0094-41a8-b63a-6989b583c5b7
+Content-Type: multipart/form-data; boundary=----Form
+
+------Form
+Content-Disposition: form-data; name="tagNames"
+
+["a","b","d"]
+------Form
 
 ### GET - pobranie tagów danego zdjęcia
-GET http://localhost:3000/api/photos/tags/b194281c-2acb-4cae-8c9b-686f3eab491c
+# DONE
+GET http://localhost:3000/api/photos/tags/b60c03e5-0094-41a8-b63a-6989b583c5b7

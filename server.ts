@@ -20,5 +20,9 @@ createServer(async (req, res) => {
     else if (req.url!.search("/api/tags") != -1) {
         await tagsRouter(req, res)
     }
+
+    else if (req.url!.search("/api/filters") != -1) {
+
+    }
 })
     .listen(PORT, () => console.log(`http://127.0.0.1:${PORT}/`))

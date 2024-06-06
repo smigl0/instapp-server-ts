@@ -3,6 +3,7 @@ import formidable from "formidable";
 import path from "path";
 import { existsSync, mkdirSync, renameSync, readFileSync, writeFileSync } from "fs";
 import { randomUUID } from "crypto";
+import { masterJsonEntry, imageChangeTimestamp } from "./masterJsonController";
 
 // import { masterJsonEntry } from "./masterJsonController";
 
@@ -68,6 +69,32 @@ class PhotoController {
         res.writeHead(200, { 'Content-Type': 'application/json' })
         res.write(JSON.stringify(myImageEntryJson))
         res.end()
+    }
+
+    writeToDb(masterJsonData: any) {
+        writeFileSync(path.join(__projectDir, 'db/master.json'), JSON.stringify(masterJsonData))
+    }
+
+    patchPhoto(req: IncomingMessage, patchName: string, newUrl?: string) {
+
+        let dbData = readFileSync(path.join(__projectDir, 'db/master.json'), { encoding: 'utf-8' })
+        let masterJsonData: masterJsonEntry[] = JSON.parse(dbData)
+
+        let index = masterJsonData.map(e => e.id).indexOf(path.basename(req.url!))
+
+
+        let patchTimestamp: imageChangeTimestamp = {
+            status: patchName,
+            timestamp: + new Date(),
+            newUrl: newUrl
+        }
+
+        masterJsonData[index].changes = patchTimestamp.status
+        masterJsonData[index].history.push(patchTimestamp)
+
+        console.log(masterJsonData[index]);
+        photoController.writeToDb(masterJsonData)
+
     }
 }
 

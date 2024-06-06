@@ -10,7 +10,8 @@ interface masterJsonEntry {
 
 interface imageChangeTimestamp {
     status: string,
-    timestamp: number
+    timestamp: number,
+    newUrl?: string
 }
 
-export { masterJsonEntry }
+export { masterJsonEntry, imageChangeTimestamp }
