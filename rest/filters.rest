@@ -1,0 +1,19 @@
+###
+GET http://localhost:3000/api/filters/metadata/206fcc9b-f8d7-450b-aed7-594c57d7fcc6
+
+###
+PATCH http://localhost:3000/api/filters
+Content-Type: 'application/json'
+
+{
+    "id":"6467aec4-97b7-4a53-ba59-f09e5c4d5d6e",
+    "filter":"tint"
+}
+### GET - current image
+GET http://localhost:3000/api/getImage/6467aec4-97b7-4a53-ba59-f09e5c4d5d6e
+
+### GET - original image
+GET http://localhost:3000/api/getImage/original/6467aec4-97b7-4a53-ba59-f09e5c4d5d6e
+
+### GET - filtered image
+GET http://localhost:3000/api/getImage/invert/6467aec4-97b7-4a53-ba59-f09e5c4d5d6e
