@@ -1,9 +1,16 @@
 [
     {
-        "uuid":"asdasd",
-        "userName":"user-1",
-        "mail":"user@mail.com",
-        "password":"zaq1@WSX",
-        "verified":"false"
+        "uuid": "521d8a02-6db7-4ee5-8bed-92cf0027ab75",
+        "username": "ksmigielski",
+        "mail": "kamil@mail.com",
+        "password": "$2a$10$4YcyIZveXX9K/O6iDm0NoezdmwL5yu52pmYSeD5fcxbuJG5OPvPlq",
+        "verified": "false"
+    },
+    {
+        "uuid": "beeccdd7-44ab-4d05-a68c-6ee0b3a722f1",
+        "username": "l0rdGregg",
+        "mail": "mail.com",
+        "password": "$2a$10$4YcyIZveXX9K/O6iDm0NoezdmwL5yu52pmYSeD5fcxbuJG5OPvPlq",
+        "verified": "true"
     }
 ]

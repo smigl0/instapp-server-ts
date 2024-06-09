@@ -1,32 +1,45 @@
 import jsonwebtoken from 'jsonwebtoken';
+
+interface masterUsersJsonEntry {
+    uuid: string,
+    username: string,
+    mail: string,
+    password: string,
+    verified: string
+}
+
 const { sign, verify } = jsonwebtoken;
 
-const createToken = () => {
+const createToken = (dataToSign: any, expiresIn: string = "1d") => {
 
     let token = sign(
-        {
-            email: "aaa@test.com",
-            anyOtherData: "123"
-        },
+        dataToSign,
         "superDuperSecretKey",
         {
-            expiresIn: "1d" // "1m", "1d", "24h"
+            expiresIn: expiresIn // "1m", "1d", "24h"
         }
     );
-    
+
     return token
 }
 
-const verifyToken = (token:string) => {
+const verifyToken = (token: string) => {
 
     try {
         let decoded = verify(token, "superDuperSecretKey")
         return decoded;
     }
-    catch {}
+    catch { }
 }
 
-console.log(verifyToken("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFhYUB0ZXN0LmNvbSIsImFueU90aGVyRGF0YSI6IjEyMyIsImlhdCI6MTcxNzc0ODM4MSwiZXhwIjoxNzE3NzQ4Mzk2fQ.v34hFIbsIHL-qdMYlp5-NA6sqhBDKpN604kHJsXbznU")
-);
+const createAuthToken = (userData: any) => {
+    let token = createToken(userData)
+    return token
+}
 
-export {createToken,verifyToken}
+const createLoginToken = (userData: masterUsersJsonEntry) => {
+    let token = createToken(userData, "1h")
+    return token
+}
+
+export { createToken, verifyToken, createAuthToken, createLoginToken }

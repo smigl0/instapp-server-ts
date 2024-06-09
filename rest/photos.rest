@@ -4,6 +4,7 @@ GET http://localhost:3000 HTTP/1.1
 ### POST - upload photo
 #   Done
 POST http://localhost:3000/api/photos HTTP/1.1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiNTIxZDhhMDItNmRiNy00ZWU1LThiZWQtOTJjZjAwMjdhYjc1IiwidXNlcm5hbWUiOiJrc21pZ2llbHNraSIsIm1haWwiOiJrYW1pbEBtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJhJDEwJDRZY3lJWnZlWFg5Sy9PNmlEbTBOb2V6ZG13TDV5dTUycG1ZU2VENWZjeGJ1Skc1T1B2UGxxIiwidmVyaWZpZWQiOiJmYWxzZSIsImlhdCI6MTcxNzk2MTUxNiwiZXhwIjoxNzE3OTY1MTE2fQ.g5G1F1DaLEqyz6rdFbzBVH-hzXueAS6us5RmsrgaIBM
 Content-Type: multipart/form-data; boundary=----FormBoundary1234
 
 ------FormBoundary1234
@@ -21,10 +22,11 @@ test_album
 ### GET - get json of all items
 #   Done
 GET http://localhost:3000/api/photos HTTP/1.1
-
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiNTIxZDhhMDItNmRiNy00ZWU1LThiZWQtOTJjZjAwMjdhYjc1IiwidXNlcm5hbWUiOiJrc21pZ2llbHNraSIsIm1haWwiOiJrYW1pbEBtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJhJDEwJDRZY3lJWnZlWFg5Sy9PNmlEbTBOb2V6ZG13TDV5dTUycG1ZU2VENWZjeGJ1Skc1T1B2UGxxIiwidmVyaWZpZWQiOiJmYWxzZSIsImlhdCI6MTcxNzk2MTUxNiwiZXhwIjoxNzE3OTY1MTE2fQ.g5G1F1DaLEqyz6rdFbzBVH-hzXueAS6us5RmsrgaIBM
 ### GET - get json of item
 #   Done
 GET http://localhost:3000/api/photos/206fcc9b-f8d7-450b-aed7-594c57d7fcc6 HTTP/1.1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiNTIxZDhhMDItNmRiNy00ZWU1LThiZWQtOTJjZjAwMjdhYjc1IiwidXNlcm5hbWUiOiJrc21pZ2llbHNraSIsIm1haWwiOiJrYW1pbEBtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJhJDEwJDRZY3lJWnZlWFg5Sy9PNmlEbTBOb2V6ZG13TDV5dTUycG1ZU2VENWZjeGJ1Skc1T1B2UGxxIiwidmVyaWZpZWQiOiJmYWxzZSIsImlhdCI6MTcxNzk2MTUxNiwiZXhwIjoxNzE3OTY1MTE2fQ.g5G1F1DaLEqyz6rdFbzBVH-hzXueAS6us5RmsrgaIBM
 
 ### DELETE - delete file
 # Done

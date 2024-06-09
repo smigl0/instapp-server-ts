@@ -1,0 +1,36 @@
+### - Register
+POST http://localhost:3000/api/auth/register
+Content-Type: multipart/form-data; boundary=----FormBoundary1234
+
+------FormBoundary1234
+Content-Disposition: form-data; name="username""
+
+L0rdGregg2
+------FormBoundary1234
+Content-Disposition: form-data; name="mail";"
+
+kamil@gmail.com
+------FormBoundary1234
+Content-Disposition: form-data; name="password"
+
+zaq1@WSX
+------FormBoundary1234
+### - Confirm token
+GET http://localhost:3000/api/auth/confirm/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiZDQ2MGJhYmQtZTRjNi00MzI1LWFjYzYtZTNmYzQyNTc0MTdlIiwiaWF0IjoxNzE3OTQzOTM0LCJleHAiOjE3MTgwMzAzMzR9.x0TgwQJ6uys6lMKEhut6gilJYfXpuRVCLuk-I2eEuhI
+
+### - logowanie z odesłaniem tokena po zalogowaniu - od tej pory każde żądanie zasobów ma zawierać token
+POST http://localhost:3000/api/auth/login
+Content-Type: multipart/form-data; boundary=----FormBoundary1234
+
+------FormBoundary1234
+Content-Disposition: form-data; name="username";
+
+ksmigielski
+------FormBoundary1234
+Content-Disposition: form-data; name="password";
+
+zaq1@WSX
+------FormBoundary1234
+
+### - get json all users
+GET http://localhost:3000/api/auth/users

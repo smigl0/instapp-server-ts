@@ -2,41 +2,37 @@ import { IncomingMessage, ServerResponse } from "http";
 import path from "path";
 import { readFileSync, writeFileSync } from "fs";
 import { createToken, verifyToken } from "../methods/tokenHandler";
-import readPost from "../methods/readPost";
+import formidable from "formidable";
+import authController from "../controllers/authController";
 
 const __projectDir = path.resolve()
 
-
 const authRouter = async (req: IncomingMessage, res: ServerResponse) => {
-    console.log("authRouter");
-    
     if (req.method == "GET") {
-        if(req.url == "/api/auth/testAuth"){
-            console.log("test");
-            
-            res.writeHead(200,{"set-cookie":`instapp-auth=${createToken()}`})
-            // res.writeHead(200)
+        if (req.url == "/api/auth/users") {
+            res.writeHead(200, { "Content-Type": "application/json" })
+            res.write(readFileSync(path.join(__projectDir, "db/users.json"), { encoding: 'utf-8' }))
             res.end()
-            
-        } else if(req.url = "/api/user/register"){
-            let data = await readPost(req)
+        }
+        else if (req.url?.search("/api/auth/confirm") != -1) {
 
-            console.log(data);
-            
-            res.end()
+            authController.verifyUser(req, res)
 
         }
-    }
-    if (req.method == "POST") {
-        if(req.url == "/api/testAuth"){
-            
-            console.log(verifyToken(req.headers.authorization as string));
-            
-            res.writeHead(200)
-            res.end()
-            
+    } else
+        if (req.method == "POST") {
+            if (req.url == "/api/auth/register") {
+
+                authController.registerUser(req, res)
+
+            }
+
+            else if (req.url == "/api/auth/login") {
+
+                authController.loginUser(req, res)
+
+            }
         }
-    }
 
 }
 
