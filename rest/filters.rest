@@ -6,14 +6,15 @@ PATCH http://localhost:3000/api/filters
 Content-Type: 'application/json'
 
 {
-    "id":"6467aec4-97b7-4a53-ba59-f09e5c4d5d6e",
+    "id":"3309e351-6bed-4fe6-8e5f-84a5f7746968",
     "filter":"tint"
 }
 ### GET - current image
-GET http://localhost:3000/api/getImage/6467aec4-97b7-4a53-ba59-f09e5c4d5d6e
+GET http://localhost:3000/api/getImage/3309e351-6bed-4fe6-8e5f-84a5f7746968
+authorization: Bearer eyJhbG.eyJlbWFpbCII6MTY1MjI4NjgzN30.xkXNNho-MxECZsJXCIU
 
 ### GET - original image
-GET http://localhost:3000/api/getImage/original/6467aec4-97b7-4a53-ba59-f09e5c4d5d6e
+GET http://localhost:3000/api/getImage/original/3309e351-6bed-4fe6-8e5f-84a5f7746968
 
 ### GET - filtered image
-GET http://localhost:3000/api/getImage/invert/6467aec4-97b7-4a53-ba59-f09e5c4d5d6e
+GET http://localhost:3000/api/getImage/invert/3309e351-6bed-4fe6-8e5f-84a5f7746968

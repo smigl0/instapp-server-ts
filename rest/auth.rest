@@ -1,0 +1,20 @@
+### GET - test auth
+GET http://localhost:3000/api/auth/testAuth
+### POST - test cookie
+POST http://localhost:3000/api/auth/testAuth
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFhYUB0ZXN0LmNvbSIsImFueU90aGVyRGF0YSI6IjEyMyIsImlhdCI6MTcxNzc0ODUwNywiZXhwIjoxNzE3ODM0OTA3fQ.MKtjf3OJeIQhG4js8ZYHjeyHKxYTU5iq3hZVki_CIHc
+
+### POST - register usera
+POST http://localhost:3000/api/auth/register
+
+{
+    "userName":"user-1",
+    "mail":"user@mail.com",
+    "password":"zaq1@WSX",
+}
+### GET - user potwierdza rejestrację konta z użyciem tokena
+GET http://localhost:3000/api/user/confirm/<token>
+### POST - logowanie z odesłaniem tokena po zalogowaniu - od tej pory każde żądanie zasobów ma zawierać token
+POST http://localhost:3000/api/user/login
+### GET - get json all users - funkcja pomocnicza dla testów zarejestrowanych userów
+GET http://localhost:3000/api/user
