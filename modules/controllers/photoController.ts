@@ -44,6 +44,9 @@ class PhotoController {
 
         // writing to master json db :_@
 
+        console.log('fields for some reason: ',fields.album![0]);
+        
+
         let myImageEntryJson = {
             "id": randomUUID(),
             "album": fields.album![0],

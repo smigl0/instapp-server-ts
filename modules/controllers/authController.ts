@@ -146,11 +146,11 @@ class AuthController {
 
         if (successBool) {
 
-            res.writeHead(200, { "Content-Type": "text/plain" })
+            res.writeHead(200,{'content-type':'text/plain'})
             res.write(createLoginToken(masterUsersJson[index!]))
             res.end()
         } else {
-            res.writeHead(401, { "Content-Type": "text/plain" })
+            res.writeHead(401)
             res.write("Invalid username or password")
             res.end()
         }
