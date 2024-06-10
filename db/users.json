@@ -1,1 +1,30 @@
-[{"uuid":"0850dfa7-91fb-4cbd-82f6-579c63bd5316","username":"ksmigielski","mail":"kamil.smigielski@outlook.com","password":"$2a$10$LDO3EYfHQVjoQQUybdxno.BE6EyT76M.4ckWShrrBLZJwTbIDKJoe","verified":"false"},{"uuid":"570a5987-97d3-4152-810d-5ba2911e2b9e","username":"ksmigielski2","mail":"kamil.smigielski2@outlook.com","password":"$2a$10$B1f7ul1IHW0/wM2UydkIPOAmFI5PgSwC4klk9uJ5LP2VlWnGdv56W","verified":"false"},{"uuid":"ddf35607-8c6b-4f6f-99a5-a5b8a6d22398","username":"ksmigielski3","mail":"asdasdasddasdasd","password":"$2a$10$9SApsXWe1L3tLVvByUV4UOHUilmzpTWjLrG/09Ld0tRTj6NomQyLm","verified":"false"},{"uuid":"b5dcf2d2-ad3e-4bdb-a257-4e540690b862","username":"ksmigielski5","mail":"asdklzxcjklzxkjclaksd","password":"$2a$10$9SApsXWe1L3tLVvByUV4UOHUilmzpTWjLrG/09Ld0tRTj6NomQyLm","verified":"false"}]
+[
+    {
+        "uuid": "0850dfa7-91fb-4cbd-82f6-579c63bd5316",
+        "username": "ksmigielski",
+        "mail": "kamil.smigielski@outlook.com",
+        "password": "$2a$10$LDO3EYfHQVjoQQUybdxno.BE6EyT76M.4ckWShrrBLZJwTbIDKJoe",
+        "verified": "false"
+    },
+    {
+        "uuid": "570a5987-97d3-4152-810d-5ba2911e2b9e",
+        "username": "ksmigielski2",
+        "mail": "kamil.smigielski2@outlook.com",
+        "password": "$2a$10$B1f7ul1IHW0/wM2UydkIPOAmFI5PgSwC4klk9uJ5LP2VlWnGdv56W",
+        "verified": "false"
+    },
+    {
+        "uuid": "ddf35607-8c6b-4f6f-99a5-a5b8a6d22398",
+        "username": "ksmigielski3",
+        "mail": "asdasdasddasdasd",
+        "password": "$2a$10$9SApsXWe1L3tLVvByUV4UOHUilmzpTWjLrG/09Ld0tRTj6NomQyLm",
+        "verified": "false"
+    },
+    {
+        "uuid": "b5dcf2d2-ad3e-4bdb-a257-4e540690b862",
+        "username": "ksmigielski5",
+        "mail": "asdklzxcjklzxkjclaksd",
+        "password": "$2a$10$9SApsXWe1L3tLVvByUV4UOHUilmzpTWjLrG/09Ld0tRTj6NomQyLm",
+        "verified": "false"
+    }
+]

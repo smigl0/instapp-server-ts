@@ -4,14 +4,16 @@ GET http://localhost:3000/api/filters/metadata/206fcc9b-f8d7-450b-aed7-594c57d7f
 ###
 PATCH http://localhost:3000/api/filters
 Content-Type: 'application/json'
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiMDg1MGRmYTctOTFmYi00Y2JkLTgyZjYtNTc5YzYzYmQ1MzE2IiwidXNlcm5hbWUiOiJrc21pZ2llbHNraSIsIm1haWwiOiJrYW1pbC5zbWlnaWVsc2tpQG91dGxvb2suY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkTERPM0VZZkhRVmpvUVFVeWJkeG5vLkJFNkV5VDc2TS40Y2tXU2hyckJMWkp3VGJJREtKb2UiLCJ2ZXJpZmllZCI6ImZhbHNlIiwiaWF0IjoxNzE4MDQyMjAxLCJleHAiOjE3MTgwNDU4MDF9.dGQkR-MAybjS5twSsku1XRwvUJPAy1LszE2LOMyIaMQ
 
 {
-    "id":"3309e351-6bed-4fe6-8e5f-84a5f7746968",
+    "id":"03ee7443-46b0-48f4-b84b-9ea4d0e47e16",
     "filter":"tint"
 }
 ### GET - current image
-GET http://localhost:3000/api/getImage/b8aae216-cd48-423e-a837-5b4aa2267d5e
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiNTIxZDhhMDItNmRiNy00ZWU1LThiZWQtOTJjZjAwMjdhYjc1IiwidXNlcm5hbWUiOiJrc21pZ2llbHNraSIsIm1haWwiOiJrYW1pbEBtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJhJDEwJDRZY3lJWnZlWFg5Sy9PNmlEbTBOb2V6ZG13TDV5dTUycG1ZU2VENWZjeGJ1Skc1T1B2UGxxIiwidmVyaWZpZWQiOiJmYWxzZSIsImlhdCI6MTcxNzk2MTUxNiwiZXhwIjoxNzE3OTY1MTE2fQ.g5G1F1DaLEqyz6rdFbzBVH-hzXueAS6us5RmsrgaIBM
+GET http://localhost:3000/api/getImage/03ee7443-46b0-48f4-b84b-9ea4d0e47e16
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiMDg1MGRmYTctOTFmYi00Y2JkLTgyZjYtNTc5YzYzYmQ1MzE2IiwidXNlcm5hbWUiOiJrc21pZ2llbHNraSIsIm1haWwiOiJrYW1pbC5zbWlnaWVsc2tpQG91dGxvb2suY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkTERPM0VZZkhRVmpvUVFVeWJkeG5vLkJFNkV5VDc2TS40Y2tXU2hyckJMWkp3VGJJREtKb2UiLCJ2ZXJpZmllZCI6ImZhbHNlIiwiaWF0IjoxNzE4MDQyMjAxLCJleHAiOjE3MTgwNDU4MDF9.dGQkR-MAybjS5twSsku1XRwvUJPAy1LszE2LOMyIaMQ
+
 
 ### GET - original image
 GET http://localhost:3000/api/getImage/original/3309e351-6bed-4fe6-8e5f-84a5f7746968

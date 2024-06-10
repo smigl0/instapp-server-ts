@@ -39,8 +39,9 @@ langosz
 
 ### PATCH - aktualizacja danych zdjęcia o tablicę nowych tag-ów
 # DONE
-PATCH http://localhost:3000/api/photos/tags/mass/b60c03e5-0094-41a8-b63a-6989b583c5b7
+PATCH http://localhost:3000/api/photos/tags/mass/03ee7443-46b0-48f4-b84b-9ea4d0e47e16
 Content-Type: multipart/form-data; boundary=----Form
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiMDg1MGRmYTctOTFmYi00Y2JkLTgyZjYtNTc5YzYzYmQ1MzE2IiwidXNlcm5hbWUiOiJrc21pZ2llbHNraSIsIm1haWwiOiJrYW1pbC5zbWlnaWVsc2tpQG91dGxvb2suY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkTERPM0VZZkhRVmpvUVFVeWJkeG5vLkJFNkV5VDc2TS40Y2tXU2hyckJMWkp3VGJJREtKb2UiLCJ2ZXJpZmllZCI6ImZhbHNlIiwiaWF0IjoxNzE4MDQ1Nzg2LCJleHAiOjE3MTgwNDkzODZ9.ytVQB1I3koByIJZKRDT6E1HYo1eVJlaheNDSjggWmL4
 
 ------Form
 Content-Disposition: form-data; name="tagNames"
@@ -50,4 +51,5 @@ Content-Disposition: form-data; name="tagNames"
 
 ### GET - pobranie tagów danego zdjęcia
 # DONE
-GET http://localhost:3000/api/photos/tags/b60c03e5-0094-41a8-b63a-6989b583c5b7
+GET http://localhost:3000/api/photos/tags/03ee7443-46b0-48f4-b84b-9ea4d0e47e16
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiMDg1MGRmYTctOTFmYi00Y2JkLTgyZjYtNTc5YzYzYmQ1MzE2IiwidXNlcm5hbWUiOiJrc21pZ2llbHNraSIsIm1haWwiOiJrYW1pbC5zbWlnaWVsc2tpQG91dGxvb2suY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkTERPM0VZZkhRVmpvUVFVeWJkeG5vLkJFNkV5VDc2TS40Y2tXU2hyckJMWkp3VGJJREtKb2UiLCJ2ZXJpZmllZCI6ImZhbHNlIiwiaWF0IjoxNzE4MDQ1Nzg2LCJleHAiOjE3MTgwNDkzODZ9.ytVQB1I3koByIJZKRDT6E1HYo1eVJlaheNDSjggWmL4

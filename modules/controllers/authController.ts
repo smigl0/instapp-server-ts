@@ -146,7 +146,7 @@ class AuthController {
 
         if (successBool) {
 
-            res.writeHead(200,{'content-type':'text/plain'})
+            res.writeHead(200, { 'content-type': 'text/plain' })
             res.write(createLoginToken(masterUsersJson[index!]))
             res.end()
         } else {

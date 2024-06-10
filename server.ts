@@ -5,6 +5,7 @@ import filterRouter from "./modules/routers/filterRouter";
 import getImageRouter from "./modules/routers/getImageRouter"
 import authRouter from "./modules/routers/authRouter";
 import authController from "./modules/controllers/authController";
+import usersRouter from "./modules/routers/usersRouter";
 
 // import path from "path";
 
@@ -31,6 +32,9 @@ createServer(async (req, res) => {
     }
     else if (await authController.checkAuth(req)) {
 
+        if (req.url!.search("/api/users") != -1) {
+            await usersRouter(req, res)
+        }
 
         if (req.url!.search("/api/photos") != -1) {
             await imageRouter(req, res)

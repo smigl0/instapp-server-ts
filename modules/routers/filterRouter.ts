@@ -96,6 +96,8 @@ const filterRouter = async (req: IncomingMessage, res: ServerResponse) => {
                 res.write(JSON.stringify(masterJsonData[index]))
                 res.end()
             } else {
+                console.log(postData);
+
                 res.writeHead(404)
                 res.end()
             }

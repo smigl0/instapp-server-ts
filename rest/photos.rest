@@ -30,7 +30,8 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiNTIxZDhhMDItNmRi
 
 ### DELETE - delete file
 # Done
-DELETE http://localhost:3000/api/photos/e2115122-5bae-4bfa-8fab-f89aeb89076c HTTP/1.1
+DELETE http://localhost:3000/api/photos/4467fe35-1191-4d7f-a7dc-96181d63cf49 HTTP/1.1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiMDg1MGRmYTctOTFmYi00Y2JkLTgyZjYtNTc5YzYzYmQ1MzE2IiwidXNlcm5hbWUiOiJrc21pZ2llbHNraSIsIm1haWwiOiJrYW1pbC5zbWlnaWVsc2tpQG91dGxvb2suY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkTERPM0VZZkhRVmpvUVFVeWJkeG5vLkJFNkV5VDc2TS40Y2tXU2hyckJMWkp3VGJJREtKb2UiLCJ2ZXJpZmllZCI6ImZhbHNlIiwiaWF0IjoxNzE4MDM0MzQ1LCJleHAiOjE3MTgwMzc5NDV9.daQK5lOPzB6O3Q_4kcV6jXCne_4XtlK77oRDTuL5nPY
 
 ### PATCH - update
 PATCH  http://localhost:3000/api/photos/b60c03e5-0094-41a8-b63a-6989b583c5b7 HTTP/1.1

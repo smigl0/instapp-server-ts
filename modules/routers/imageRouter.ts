@@ -109,6 +109,9 @@ const imageRouter = async (req: IncomingMessage, res: ServerResponse) => {
             [postData,] = await form.parse(req);
             postData.tagNames![0] = JSON.parse(postData.tagNames![0])
 
+            console.log(postData.tagNames!);
+
+
             let newTagNames = [...postData.tagNames![0]]
             newTagNames = newTagNames.map((ele, index) => {
                 if (ele[0] != '#') ele = '#' + ele
@@ -219,13 +222,13 @@ const imageRouter = async (req: IncomingMessage, res: ServerResponse) => {
             } else {
                 console.log((masterJsonData[index] as any));
 
-                masterJsonData.splice(index, 1)
-
-                photoController.writeToDb(masterJsonData)
-
                 res.writeHead(200, { 'Content-Type': 'application/json' })
                 res.write(JSON.stringify(masterJsonData[index]))
                 res.end()
+
+                masterJsonData.splice(index, 1)
+
+                photoController.writeToDb(masterJsonData)
             }
         }
     }
